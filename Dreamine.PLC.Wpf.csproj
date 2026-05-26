@@ -29,8 +29,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Dreamine.PLC.Abstractions\Dreamine.PLC.Abstractions.csproj" />
-		<ProjectReference Include="..\Dreamine.PLC.Core\Dreamine.PLC.Core.csproj" />
+		<ProjectReference Include="..\PLC.Abstractions\Dreamine.PLC.Abstractions.csproj" />
+		<ProjectReference Include="..\PLC.Core\Dreamine.PLC.Core.csproj" />
 	</ItemGroup>
 
 </Project>
