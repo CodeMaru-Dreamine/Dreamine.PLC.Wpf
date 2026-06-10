@@ -1,5 +1,7 @@
 # Dreamine.PLC.Wpf
 
+[English documentation](./README.md)
+
 Dreamine PLC 통신을 위한 WPF 모니터링 및 진단 UI 컴포넌트입니다.
 
 이 패키지는 Dreamine PLC 패키지군의 모든 `IPlcClient` 구현체와 바인딩 가능한 재사용 PLC Monitor View를 제공합니다.

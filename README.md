@@ -1,5 +1,7 @@
 # Dreamine.PLC.Wpf
 
+[Korean documentation](./README_KO.md)
+
 WPF monitoring and diagnostic UI components for Dreamine PLC communication.
 
 This package provides a reusable PLC monitor view that can bind to any `IPlcClient` implementation from the Dreamine PLC package family.
