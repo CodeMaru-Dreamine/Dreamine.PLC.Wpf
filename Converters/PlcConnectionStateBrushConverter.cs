@@ -6,7 +6,7 @@ using Dreamine.PLC.Abstractions.Connections;
 namespace Dreamine.PLC.Wpf.Converters;
 
 /// <summary>
-/// \brief Converts PLC connection state values to brushes.
+/// Converts PLC connection state values to brushes.
 /// </summary>
 public sealed class PlcConnectionStateBrushConverter : IValueConverter
 {

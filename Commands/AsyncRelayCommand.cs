@@ -3,16 +3,17 @@ using System.Windows.Input;
 namespace Dreamine.PLC.Wpf.Commands;
 
 /// <summary>
-/// \brief Provides an asynchronous ICommand implementation.
+/// Provides an asynchronous ICommand implementation.
 /// </summary>
 public sealed class AsyncRelayCommand : ICommand
 {
     private readonly Func<Task> _execute;
     private readonly Func<bool>? _canExecute;
     private bool _isExecuting;
+    private Exception? _lastException;
 
     /// <summary>
-    /// \brief Initializes a new instance of the <see cref="AsyncRelayCommand"/> class.
+    /// Initializes a new instance of the <see cref="AsyncRelayCommand"/> class.
     /// </summary>
     /// <param name="execute">The asynchronous execute delegate.</param>
     /// <param name="canExecute">The optional can-execute delegate.</param>
@@ -24,6 +25,16 @@ public sealed class AsyncRelayCommand : ICommand
 
     /// <inheritdoc />
     public event EventHandler? CanExecuteChanged;
+
+    /// <summary>
+    /// Occurs when the asynchronous delegate throws an exception.
+    /// </summary>
+    public event EventHandler<Exception>? ExecutionFailed;
+
+    /// <summary>
+    /// Gets the last exception thrown by the asynchronous delegate.
+    /// </summary>
+    public Exception? LastException => _lastException;
 
     /// <inheritdoc />
     public bool CanExecute(object? parameter)
@@ -45,6 +56,11 @@ public sealed class AsyncRelayCommand : ICommand
             RaiseCanExecuteChanged();
             await _execute().ConfigureAwait(true);
         }
+        catch (Exception ex)
+        {
+            _lastException = ex;
+            ExecutionFailed?.Invoke(this, ex);
+        }
         finally
         {
             _isExecuting = false;
@@ -53,7 +69,7 @@ public sealed class AsyncRelayCommand : ICommand
     }
 
     /// <summary>
-    /// \brief Raises the CanExecuteChanged event.
+    /// Raises the CanExecuteChanged event.
     /// </summary>
     public void RaiseCanExecuteChanged()
     {

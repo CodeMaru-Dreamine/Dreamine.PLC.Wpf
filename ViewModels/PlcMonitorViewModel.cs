@@ -13,7 +13,7 @@ using Dreamine.PLC.Wpf.Models;
 namespace Dreamine.PLC.Wpf.ViewModels;
 
 /// <summary>
-/// \brief Provides a vendor-neutral PLC monitor ViewModel.
+/// Provides a vendor-neutral PLC monitor ViewModel.
 /// </summary>
 public sealed class PlcMonitorViewModel : INotifyPropertyChanged, IAsyncDisposable
 {
@@ -28,7 +28,7 @@ public sealed class PlcMonitorViewModel : INotifyPropertyChanged, IAsyncDisposab
     private PlcConnectionState _state = PlcConnectionState.Disconnected;
 
     /// <summary>
-    /// \brief Initializes a new instance of the <see cref="PlcMonitorViewModel"/> class.
+    /// Initializes a new instance of the <see cref="PlcMonitorViewModel"/> class.
     /// </summary>
     public PlcMonitorViewModel()
         : this(new InMemoryPlcClient(), "InMemory PLC")
@@ -36,7 +36,7 @@ public sealed class PlcMonitorViewModel : INotifyPropertyChanged, IAsyncDisposab
     }
 
     /// <summary>
-    /// \brief Initializes a new instance of the <see cref="PlcMonitorViewModel"/> class.
+    /// Initializes a new instance of the <see cref="PlcMonitorViewModel"/> class.
     /// </summary>
     /// <param name="client">The PLC client.</param>
     /// <param name="channelName">The channel display name.</param>
@@ -60,47 +60,47 @@ public sealed class PlcMonitorViewModel : INotifyPropertyChanged, IAsyncDisposab
     public event PropertyChangedEventHandler? PropertyChanged;
 
     /// <summary>
-    /// \brief Gets the PLC operation logs.
+    /// Gets the PLC operation logs.
     /// </summary>
     public ObservableCollection<PlcOperationLogItem> Logs { get; } = [];
 
     /// <summary>
-    /// \brief Gets the connect command.
+    /// Gets the connect command.
     /// </summary>
     public ICommand ConnectCommand { get; }
 
     /// <summary>
-    /// \brief Gets the disconnect command.
+    /// Gets the disconnect command.
     /// </summary>
     public ICommand DisconnectCommand { get; }
 
     /// <summary>
-    /// \brief Gets the read bits command.
+    /// Gets the read bits command.
     /// </summary>
     public ICommand ReadBitsCommand { get; }
 
     /// <summary>
-    /// \brief Gets the read words command.
+    /// Gets the read words command.
     /// </summary>
     public ICommand ReadWordsCommand { get; }
 
     /// <summary>
-    /// \brief Gets the write bits command.
+    /// Gets the write bits command.
     /// </summary>
     public ICommand WriteBitsCommand { get; }
 
     /// <summary>
-    /// \brief Gets the write words command.
+    /// Gets the write words command.
     /// </summary>
     public ICommand WriteWordsCommand { get; }
 
     /// <summary>
-    /// \brief Gets the clear log command.
+    /// Gets the clear log command.
     /// </summary>
     public ICommand ClearLogCommand { get; }
 
     /// <summary>
-    /// \brief Gets or sets the channel display name.
+    /// Gets or sets the channel display name.
     /// </summary>
     public string ChannelName
     {
@@ -109,7 +109,7 @@ public sealed class PlcMonitorViewModel : INotifyPropertyChanged, IAsyncDisposab
     }
 
     /// <summary>
-    /// \brief Gets or sets the PLC address text.
+    /// Gets or sets the PLC address text.
     /// </summary>
     public string AddressText
     {
@@ -118,7 +118,7 @@ public sealed class PlcMonitorViewModel : INotifyPropertyChanged, IAsyncDisposab
     }
 
     /// <summary>
-    /// \brief Gets or sets the read count text.
+    /// Gets or sets the read count text.
     /// </summary>
     public string CountText
     {
@@ -127,7 +127,7 @@ public sealed class PlcMonitorViewModel : INotifyPropertyChanged, IAsyncDisposab
     }
 
     /// <summary>
-    /// \brief Gets or sets the write bit values text.
+    /// Gets or sets the write bit values text.
     /// </summary>
     public string BitValuesText
     {
@@ -136,7 +136,7 @@ public sealed class PlcMonitorViewModel : INotifyPropertyChanged, IAsyncDisposab
     }
 
     /// <summary>
-    /// \brief Gets or sets the write word values text.
+    /// Gets or sets the write word values text.
     /// </summary>
     public string WordValuesText
     {
@@ -145,7 +145,7 @@ public sealed class PlcMonitorViewModel : INotifyPropertyChanged, IAsyncDisposab
     }
 
     /// <summary>
-    /// \brief Gets the current PLC connection state.
+    /// Gets the current PLC connection state.
     /// </summary>
     public PlcConnectionState State
     {
@@ -154,7 +154,7 @@ public sealed class PlcMonitorViewModel : INotifyPropertyChanged, IAsyncDisposab
     }
 
     /// <summary>
-    /// \brief Gets or sets the status message.
+    /// Gets or sets the status message.
     /// </summary>
     public string StatusMessage
     {
@@ -163,7 +163,7 @@ public sealed class PlcMonitorViewModel : INotifyPropertyChanged, IAsyncDisposab
     }
 
     /// <summary>
-    /// \brief Replaces the current PLC client.
+    /// Replaces the current PLC client.
     /// </summary>
     /// <param name="client">The new PLC client.</param>
     /// <param name="channelName">The channel display name.</param>
@@ -180,7 +180,7 @@ public sealed class PlcMonitorViewModel : INotifyPropertyChanged, IAsyncDisposab
     }
 
     /// <summary>
-    /// \brief Adds an external diagnostic log entry to the PLC monitor.
+    /// Adds an external diagnostic log entry to the PLC monitor.
     /// </summary>
     /// <param name="operation">The operation name.</param>
     /// <param name="address">The PLC address.</param>

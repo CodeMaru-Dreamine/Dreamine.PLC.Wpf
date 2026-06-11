@@ -3,7 +3,7 @@ using System.Windows.Input;
 namespace Dreamine.PLC.Wpf.Commands;
 
 /// <summary>
-/// \brief Provides a synchronous ICommand implementation.
+/// Provides a synchronous ICommand implementation.
 /// </summary>
 public sealed class RelayCommand : ICommand
 {
@@ -11,7 +11,7 @@ public sealed class RelayCommand : ICommand
     private readonly Func<bool>? _canExecute;
 
     /// <summary>
-    /// \brief Initializes a new instance of the <see cref="RelayCommand"/> class.
+    /// Initializes a new instance of the <see cref="RelayCommand"/> class.
     /// </summary>
     /// <param name="execute">The execute delegate.</param>
     /// <param name="canExecute">The optional can-execute delegate.</param>
@@ -40,7 +40,7 @@ public sealed class RelayCommand : ICommand
     }
 
     /// <summary>
-    /// \brief Raises the CanExecuteChanged event.
+    /// Raises the CanExecuteChanged event.
     /// </summary>
     public void RaiseCanExecuteChanged()
     {
