@@ -7,6 +7,7 @@ using Dreamine.PLC.Abstractions.Clients;
 using Dreamine.PLC.Abstractions.Connections;
 using Dreamine.PLC.Core.Clients;
 using Dreamine.PLC.Core.Devices;
+using Dreamine.MVVM.ViewModels;
 using Dreamine.PLC.Wpf.Commands;
 using Dreamine.PLC.Wpf.Models;
 

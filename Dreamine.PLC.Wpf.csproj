@@ -31,6 +31,7 @@
 	<ItemGroup>
 		<ProjectReference Include="..\PLC.Abstractions\Dreamine.PLC.Abstractions.csproj" />
 		<ProjectReference Include="..\PLC.Core\Dreamine.PLC.Core.csproj" />
+		<ProjectReference Include="..\ViewModels\Dreamine.MVVM.ViewModels.csproj" />
 	</ItemGroup>
 
 </Project>

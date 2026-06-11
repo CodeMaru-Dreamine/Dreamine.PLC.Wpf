@@ -23,9 +23,11 @@ public sealed class PlcConnectionStateBrushConverter : IValueConverter
         };
     }
 
-    /// <inheritdoc />
+    /// <summary>
+    /// One-way converter — ConvertBack is not supported and returns <see cref="Binding.DoNothing"/>.
+    /// </summary>
     public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
     {
-        throw new NotSupportedException();
+        return Binding.DoNothing;
     }
 }
